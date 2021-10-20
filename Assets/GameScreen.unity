@@ -25217,6 +25217,11 @@ MonoBehaviour:
     m_Bits: 64
   isSprinting: 0
   sprintingMultiplier: 1.5
+  isCrouching: 0
+  standingHeight: 4
+  crouchingMultiplier: 0.5
+  crouchingHeight: 2
+  isGrounded: 0
 --- !u!143 &1897536339
 CharacterController:
   m_ObjectHideFlags: 0
@@ -25228,7 +25233,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3.8
+  m_Height: 4
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.7
