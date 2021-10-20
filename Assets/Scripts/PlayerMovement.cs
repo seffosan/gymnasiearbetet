@@ -56,7 +56,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            isSprinting = true;
+            if (isGrounded)
+            {
+                isSprinting = true;
+            }
         }
         else
         {
