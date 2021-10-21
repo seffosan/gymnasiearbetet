@@ -40,25 +40,30 @@ public class EnemyChase : MonoBehaviour
 
   private void ChasePlayer()
   {
-    agent.SetDestination(player.position);
-
+    if (player != null)
+    {
+      agent.SetDestination(player.position);
+    }
   }
 
   private void AttackPlayer()
   {
-    agent.SetDestination(transform.position);
-
-    transform.LookAt(player);
-
-    if (!alreadyAttacked)
+    if (player != null)
     {
-      Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-      rb.AddForce(transform.forward * 80f, ForceMode.Impulse);
-      rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-      Debug.Log("attack");
+      agent.SetDestination(transform.position);
 
-      alreadyAttacked = true;
-      Invoke(nameof(ResetAttack), timeBetweenAttacks);
+      transform.LookAt(player);
+
+      if (!alreadyAttacked)
+      {
+        Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+        rb.AddForce(transform.forward * 80f, ForceMode.Impulse);
+        rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+        Debug.Log("attack");
+
+        alreadyAttacked = true;
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
+      }
     }
   }
 
