@@ -1,20 +1,17 @@
-using System.Threading;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public float damage = 10f;
+    public float damage = 30f;
     public float range = 100f;
     public float fireRate = 15;
     public float impactForce = 300000f;
 
     public Camera fpsCam;
-    public ParticleSystem muzzleFlash;
-
-    public GameObject impactEffect;
+    /*public ParticleSystem muzzleFlash;
+    public GameObject impactEffect;*/
 
     private float nextTimeToFire = 0;
-
 
     // Update is called once per frame
     void Update()
@@ -29,7 +26,7 @@ public class Weapon : MonoBehaviour
 
     void shoot()
     {
-        muzzleFlash.Play();
+        /*muzzleFlash.Play();*/
 
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -47,10 +44,15 @@ public class Weapon : MonoBehaviour
 
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
-            GameObject impactGO = Instantiate(impactEffect, -hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGO, 2f);
+
+            /*GameObject impactGO = Instantiate(impactEffect, -hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impactGO, 2f);*/
 
 
         }
     }
+
+
+
+
 }
