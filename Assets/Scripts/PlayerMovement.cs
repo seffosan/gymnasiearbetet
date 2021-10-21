@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
     public float robert = -300f;
 
-
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -19,18 +18,17 @@ public class PlayerMovement : MonoBehaviour
     public bool isSprinting = false;
     public float sprintingMultiplier;
 
+    public bool isCrouching = false;
+    public float standingHeight = 4f;
+    public float crouchingMultiplier = 0.5f;
+
+    public float crouchingHeight = 2f;
+
     Vector3 velocity;
-    bool isGrounded;
+    public bool isGrounded;
+    //bool isGrounded;
 
-
-
-    /*private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
-    private Vector3 playerScale;
-    public float slideForce = 400;
-    public float slideCounterMovement = 0.2f;*/
-
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
+    /// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -58,7 +56,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            isSprinting = true;
+            if (isGrounded)
+            {
+                isSprinting = true;
+            }
         }
         else
         {
@@ -67,6 +68,23 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = new Vector3();
         move = transform.right * x + transform.forward * z;
+
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            controller.height = crouchingHeight;
+            move *= crouchingMultiplier;
+            isGrounded = true;
+            isSprinting = false;
+        }
+        else
+        {
+            controller.height = standingHeight;
+        }
+
+        if (isSprinting == true)
+        {
+            move *= sprintingMultiplier;
+        }
 
         if (isSprinting == true)
         {

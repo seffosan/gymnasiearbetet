@@ -3363,7 +3363,7 @@ MonoBehaviour:
   minZ: 0
   maxZ: 0
   minSpawnTime: 1
-  maxSpawnTime: 5
+  maxSpawnTime: 8
   maxEnemy: 15
   enemyAmount: 0
 --- !u!1001 &158887926
@@ -25216,7 +25216,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isSprinting: 0
-  sprintingMultiplier: 1.5
+  sprintingMultiplier: 1.2
+  isCrouching: 0
+  standingHeight: 4
+  crouchingMultiplier: 0.5
+  crouchingHeight: 2
+  isGrounded: 0
 --- !u!143 &1897536339
 CharacterController:
   m_ObjectHideFlags: 0
@@ -25228,7 +25233,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3.8
+  m_Height: 4
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.7
