@@ -3363,8 +3363,8 @@ MonoBehaviour:
   minZ: 0
   maxZ: 0
   minSpawnTime: 1
-  maxSpawnTime: 8
-  maxEnemy: 15
+  maxSpawnTime: 5
+  maxEnemy: 20
   enemyAmount: 0
 --- !u!1001 &158887926
 PrefabInstance:
@@ -27176,6 +27176,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 661278771872079028, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163523677801010113, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476932884010680483, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476932884010680485, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: range
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3476932884010680485, guid: 64a33e70d449ff94091810ec7b5fc844,
         type: 3}
       propertyPath: damage
@@ -27184,12 +27204,22 @@ PrefabInstance:
     - target: {fileID: 3476932884010680485, guid: 64a33e70d449ff94091810ec7b5fc844,
         type: 3}
       propertyPath: impactForce
-      value: 3000
+      value: 30000
       objectReference: {fileID: 0}
     - target: {fileID: 3476932884051029840, guid: 64a33e70d449ff94091810ec7b5fc844,
         type: 3}
       propertyPath: m_Name
       value: First Person Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476932884051029840, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476932884051029840, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3476932884051029842, guid: 64a33e70d449ff94091810ec7b5fc844,
         type: 3}
@@ -27255,6 +27285,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476932884485226157, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476932884699449924, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360018632452276889, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360018634179139054, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407587732243783663, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493924843041888916, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864734608571132299, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386555194549861723, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64a33e70d449ff94091810ec7b5fc844, type: 3}
