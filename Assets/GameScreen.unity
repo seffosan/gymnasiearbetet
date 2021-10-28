@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 1
-    agentSlope: 50
+    agentRadius: 0.75
+    agentHeight: 2
+    agentSlope: 43
     agentClimb: 0.4
     ledgeDropHeight: 1
     maxJumpAcrossDistance: 1
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.25
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: e6879df8788842349a29686f5e1df838, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 209b130cccac8ed4d98f2d1598f28e10, type: 2}
 --- !u!1001 &2017085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3355,7 +3355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ec54e07cede6e44ae394a7362f3885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObj: {fileID: 2298871439795109209, guid: cbf234f4b89ae9b4d82a5cd0d3716741,
+  spawnObj: {fileID: 7832219098745068093, guid: a5c0be1ab73d5a744b31032b17c37747,
     type: 3}
   player: {fileID: 1897536340}
   minX: 0
@@ -27201,6 +27201,12 @@ PrefabInstance:
       propertyPath: damage
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 3476932884010680485, guid: 64a33e70d449ff94091810ec7b5fc844,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 4402766560892062175, guid: 321797489af0cb441a6ececf6c34b3eb,
+        type: 3}
     - target: {fileID: 3476932884010680485, guid: 64a33e70d449ff94091810ec7b5fc844,
         type: 3}
       propertyPath: impactForce

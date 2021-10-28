@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public Camera cam;
+  public Camera cam;
 
-    void OnCollisionEnter(Collision collision)
+  void OnCollisionEnter(Collision collision)
+  {
+
+    Target target = collision.gameObject.transform.GetComponent<Target>();
+
+    if (collision.gameObject.name == "First Person Player")
     {
-        if (collision.gameObject.name == "First Person Player")
-        {
-            Debug.Log("Dead :)");
-            //Destroy(collision.gameObject);
-            //Instantiate(cam, transform.position, transform.rotation);
+      Debug.Log("-30");
+      //   target.TakeDamage(Weapon.damage);
 
-        }
     }
+    else if (collision.gameObject.name == "Modular military character")
+    {
+      target.TakeDamage(Weapon.damage);
+      Debug.Log(Weapon.damage);
+
+    }
+  }
 }
