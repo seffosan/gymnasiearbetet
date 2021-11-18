@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class bullet : MonoBehaviour
@@ -17,11 +15,12 @@ public class bullet : MonoBehaviour
       //   target.TakeDamage(Weapon.damage);
 
     }
-    else if (collision.gameObject.name == "Modular military character")
+    else if (collision.gameObject.name == "Modular military character Variant(Clone)")
     {
       target.TakeDamage(Weapon.damage);
       Debug.Log(Weapon.damage);
-
     }
+
+    Debug.Log(collision.gameObject.name);
   }
 }
