@@ -57,8 +57,8 @@ public class EnemyChase : MonoBehaviour
       if (!alreadyAttacked)
       {
         Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * 70f, ForceMode.Impulse);
-        rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+        rb.AddForce(transform.forward * 200f, ForceMode.Impulse);
+        rb.AddForce(transform.up * 10f, ForceMode.Impulse);
 
         alreadyAttacked = true;
         Invoke(nameof(ResetAttack), timeBetweenAttacks);

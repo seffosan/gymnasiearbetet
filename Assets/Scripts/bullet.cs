@@ -17,7 +17,7 @@ public class bullet : MonoBehaviour
     }
     else if (collision.gameObject.name == "Modular military character Variant(Clone)")
     {
-      target.TakeDamage(Weapon.damage);
+      // target.TakeDamage(Weapon.damage);
       Debug.Log(Weapon.damage);
     }
 

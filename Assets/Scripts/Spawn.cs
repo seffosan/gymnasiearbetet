@@ -35,13 +35,32 @@ public class Spawn : MonoBehaviour
   void SpawnObject1()
   {
     // !Spawnar fienden i Random plats
-    // float x = Random.Range(minX, maxX);
-    // float z = Random.Range(minZ, maxZ);
 
-    Instantiate(spawnObj, player.position + new Vector3(0, 0 + 2, 0), Quaternion.identity);
+    GameObject instance = Instantiate(spawnObj, player.position + new Vector3(0, 0 + 2, 0), Quaternion.identity);
+    instance.transform.Rotate(Vector3.up, Random.Range(0f, 360f));
 
     isSpawning = false;
     enemyAmount += 1;
+
+    // List<Transform> near = new List<Transform>();
+    // foreach (Transform spawnPoint in transform.childCount)
+    // {
+    //   if (Vector3.Distance(player.transform.position, spawnPoint.position) < 10)
+    //   {
+    //     near.Add(spawnPoint);
+    //   }
+
+    //   if (near.Count > 0)
+    //   {
+    //     int index = Random.Range(0, spawnPoint.Count);
+    //     Transform spawnAt = spawnPoints[index];
+    //     if (spawnAt != null)
+    //     {
+    //       GameObject instance = Instantiate(objectToSpawn, spawnAt.position, Quaternion.identity);
+    //       instance.transform.Rotate(Vector3.up, Random.Range(0f, 360f));
+    //     }
+    //   }
+    // }
 
   }
 }
