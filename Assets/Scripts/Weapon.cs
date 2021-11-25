@@ -62,36 +62,36 @@ public class Weapon : MonoBehaviour
     // CheckViewable();
 
     /*muzzleFlash.Play();*/
+    // Rigidbody rb = Instantiate(projectile, fpsCam.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
 
-    Rigidbody rb = Instantiate(projectile, fpsCam.transform.position, Quaternion.Euler(0f, -90f, 0f)).GetComponent<Rigidbody>();
-    // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-    x = Random.Range(bulletRandomDown, bulletRandomUp);
-    rb.AddForce(transform.forward * 90f, ForceMode.Impulse);
-    rb.AddForce(transform.up * x, ForceMode.Impulse);
-    isShooting = true;
-    gun.transform.Rotate(-20.0f, 0.0f, 0.0f, Space.Self);
+    // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.Euler(0, -90, 0)).GetComponent<Rigidbody>();
+    // x = Random.Range(bulletRandomDown, bulletRandomUp);
+    // rb.AddForce(transform.forward * 200f, ForceMode.Impulse);
+    // rb.AddForce(transform.up * x, ForceMode.Impulse);
+    // isShooting = true;
 
-
+    // gun.transform.Rotate(-20.0f, 0.0f, 0.0f, Space.Self);
     // !den förra skottsaken
-    // RaycastHit hit;
-    // if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
-    // {
+    RaycastHit hit;
+    if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+    {
 
 
-    //   Target target = hit.transform.GetComponent<Target>();
-    //   if (target != null)
-    //   {
-    //     target.TakeDamage(damage);
-    //   }
+      Target target = hit.transform.GetComponent<Target>();
+      if (target != null)
+      {
+        target.TakeDamage(damage);
+      }
 
-    //   if (hit.rigidbody != null)
-    //   {
+      if (hit.rigidbody != null)
+      {
 
-    //     hit.rigidbody.AddForce(-hit.normal * impactForce);
-    //   }
+        hit.rigidbody.AddForce(-hit.normal * impactForce);
+      }
 
-    // GameObject impactGO = Instantiate(impactEffect, -hit.point, Quaternion.LookRotation(hit.normal));
-    // Destroy(impactGO, 2f);
+      // GameObject impactGO = Instantiate(impactEffect, -hit.point, Quaternion.LookRotation(hit.normal));
+      // Destroy(impactGO, 2f);
 
+    }
   }
 }
