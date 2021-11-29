@@ -32,15 +32,18 @@ public class Spawn : MonoBehaviour
       isSpawning = true;
     }
   }
+
   void SpawnObject1()
   {
     // !Spawnar fienden i Random plats
+    float x = Random.Range(minX, maxX);
+    float z = Random.Range(minZ, maxZ);
 
-    GameObject instance = Instantiate(spawnObj, player.position + new Vector3(0, 0 + 2, 0), Quaternion.identity);
-    instance.transform.Rotate(Vector3.up, Random.Range(0f, 360f));
-
+    Instantiate(spawnObj, new Vector3(x, 5, z), Quaternion.identity);
     isSpawning = false;
     enemyAmount += 1;
+
+  }
 
     // List<Transform> near = new List<Transform>();
     // foreach (Transform spawnPoint in transform.childCount)
@@ -63,4 +66,4 @@ public class Spawn : MonoBehaviour
     // }
 
   }
-}
+

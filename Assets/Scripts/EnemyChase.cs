@@ -53,7 +53,7 @@ public class EnemyChase : MonoBehaviour
       agent.SetDestination(transform.position);
 
       transform.LookAt(player);
-
+ResetAttack();
       if (!alreadyAttacked)
       {
         Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
