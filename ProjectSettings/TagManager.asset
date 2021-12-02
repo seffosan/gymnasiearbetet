@@ -12,18 +12,18 @@ TagManager:
   - 
   - Water
   - UI
+  - 
+  - 
   - Ground
+  - Stuff
+  - Wall
+  - 
+  - 
+  - Enemy
+  - 
   - Player
-  - PostProcessing
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
   - 
   - 
   - 
