@@ -2602,11 +2602,6 @@ MonoBehaviour:
     volume: 0.4
     pitch: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: ea8cef2a671fa7341a9bb05ea92f8a59, type: 3}
-    name: PauseLoop
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
   - clip: {fileID: 8300000, guid: e95533ea6af4a1e4fa49922f2fe35eab, type: 3}
     name: ButtonClick
     volume: 1
@@ -2619,12 +2614,27 @@ MonoBehaviour:
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: ea8cef2a671fa7341a9bb05ea92f8a59, type: 3}
     name: Menu
-    volume: 0.6
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: a253f507ba4adf64caf95454e00c5f3c, type: 3}
-    name: Bgm
-    volume: 0.15
+  - clip: {fileID: 8300000, guid: 34a29fbf780b7487cabdf5d88aac8fc8, type: 3}
+    name: Shot
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 4996c0db51a0d4f50b61ed7d2108bf4f, type: 3}
+    name: Walk
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 4996c0db51a0d4f50b61ed7d2108bf4f, type: 3}
+    name: WeirdBGM
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 39cd07fd689d644c6b6ced879d89c6c7, type: 3}
+    name: Jump
+    volume: 1
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &960786707

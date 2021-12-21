@@ -35,7 +35,8 @@ public class Gun : MonoBehaviour
       if (target != null)
       {
         target.TakeDamage(damage);
-        FindObjectOfType<AudioManager>().Play("HitSound");
+      FindObjectOfType<AudioManager>().Play("Shot");
+        // FindObjectOfType<AudioManager>().Play("HitSound");
         GameObject effektGO2 = Instantiate(effect2, hit.point, Quaternion.identity);
         Destroy(effektGO2, 1f);
         Score.scoreValue += 20;

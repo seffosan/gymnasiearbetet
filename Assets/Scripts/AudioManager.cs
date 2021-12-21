@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
       s.source.clip = s.clip;
       s.source.volume = s.volume;
       s.source.pitch = s.pitch;
+      s.isPlaying = false;
     }
   }
 
@@ -23,12 +24,29 @@ public class AudioManager : MonoBehaviour
   public void Play(string name)
   {
     Sound s = Array.Find(sounds, Sound => Sound.name == name);
-    s.source.Play();
+    if (s.isPlaying = false)
+    {
+      s.source.Play();   
+      s.isPlaying = true;
+    }
+    else{
+      s.source.Stop();
+      s.isPlaying = false;
+    }
   }
 
   public void Stop(string name)
   {
+
     Sound s = Array.Find(sounds, Sound => Sound.name == name);
-    s.source.Stop();
+    if (s.isPlaying = true)
+    {
+      s.source.Stop();
+      s.isPlaying = false;
+    }
+    else{
+      s.source.Play(); 
+    }
+
   }
 }
