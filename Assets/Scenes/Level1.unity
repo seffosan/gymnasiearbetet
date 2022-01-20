@@ -2602,11 +2602,6 @@ MonoBehaviour:
     volume: 0.4
     pitch: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: ea8cef2a671fa7341a9bb05ea92f8a59, type: 3}
-    name: PauseLoop
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
   - clip: {fileID: 8300000, guid: e95533ea6af4a1e4fa49922f2fe35eab, type: 3}
     name: ButtonClick
     volume: 1
@@ -2619,12 +2614,27 @@ MonoBehaviour:
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: ea8cef2a671fa7341a9bb05ea92f8a59, type: 3}
     name: Menu
-    volume: 0.6
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: a253f507ba4adf64caf95454e00c5f3c, type: 3}
-    name: Bgm
-    volume: 0.15
+  - clip: {fileID: 8300000, guid: 34a29fbf780b7487cabdf5d88aac8fc8, type: 3}
+    name: Shot
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 4996c0db51a0d4f50b61ed7d2108bf4f, type: 3}
+    name: Walk
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 4996c0db51a0d4f50b61ed7d2108bf4f, type: 3}
+    name: WeirdBGM
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 39cd07fd689d644c6b6ced879d89c6c7, type: 3}
+    name: Jump
+    volume: 1
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &960786707
@@ -3295,6 +3305,7 @@ RectTransform:
   - {fileID: 422370659}
   - {fileID: 1149361042}
   - {fileID: 2000339618}
+  - {fileID: 1931334816}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4331,6 +4342,101 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!1 &1931334815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1931334816}
+  - component: {fileID: 1931334819}
+  - component: {fileID: 1931334818}
+  - component: {fileID: 1931334817}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1931334816
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931334815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275040416}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.95562816, y: 1}
+  m_AnchorMax: {x: 0.95562816, y: 1}
+  m_AnchoredPosition: {x: -49.4, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1931334817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931334815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63ccc988b0694d8693b3afcb67561a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1931334818}
+--- !u!114 &1931334818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931334815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 34
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 88
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '
+
+'
+--- !u!222 &1931334819
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931334815}
+  m_CullTransparentMesh: 0
 --- !u!1 &1942316331
 GameObject:
   m_ObjectHideFlags: 0
