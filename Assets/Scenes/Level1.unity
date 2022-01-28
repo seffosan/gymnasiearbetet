@@ -2683,6 +2683,12 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     isPlaying: 0
+  - clip: {fileID: 8300000, guid: 5454140ff89fc458d8a9dd6b8eb89876, type: 3}
+    name: WKill
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isPlaying: 0
 --- !u!4 &960786707
 Transform:
   m_ObjectHideFlags: 0

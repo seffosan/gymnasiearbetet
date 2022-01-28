@@ -34,6 +34,7 @@ public class Target : MonoBehaviour
     // !Dör
     Destroy(gameObject);
     Score.scoreValue += getScoreFromKill;
+    FindObjectOfType<AudioManager>().Play("WKill");
   }
 
 }

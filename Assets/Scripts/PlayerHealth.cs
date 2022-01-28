@@ -60,7 +60,5 @@ public class PlayerHealth : MonoBehaviour
     gameHasEnded = true;
     Cursor.lockState = CursorLockMode.None;
     Cursor.visible = true;
-    FindObjectOfType<AudioManager>().Stop("Bgm");
-    FindObjectOfType<AudioManager>().Play("PauseLoop");
   }
 }
