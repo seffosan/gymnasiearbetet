@@ -16,7 +16,6 @@ public class Timer : MonoBehaviour
   }
   void FixedUpdate()
   {
-    Debug.Log(timerValue);
     timerValue += Time.deltaTime;
     timerText.text = "Time: " +timerValue.ToString();
 

@@ -12,22 +12,19 @@ public class Gun : MonoBehaviour
   public GameObject effect2;
 
   float fireTime = 0f;
+
   void Update()
   {
     // !Kontroll
-    // while (Input.GetButtonDown("Fire1"))
-    // {
-      FindObjectOfType<AudioManager>().PlayOnce("pew");
-    // }
-
     if (Input.GetButton("Fire1") && Time.time >= fireTime)
     {
       fireTime = Time.time + 1f / fireRate;
-      // FindObjectOfType<AudioManager>().Play("pew");
+      FindObjectOfType<AudioManager>().Play("pew");
       Shoot();
     }
 
   }
+
   void Shoot()
   {
     // !Skottet
@@ -41,7 +38,7 @@ public class Gun : MonoBehaviour
       if (target != null)
       {
         target.TakeDamage(damage);
-        // FindObjectOfType<AudioManager>().Play("HitSound");
+        FindObjectOfType<AudioManager>().Play("Whit");
         GameObject effektGO2 = Instantiate(effect2, hit.point, Quaternion.identity);
         Destroy(effektGO2, 1f);
         Score.scoreValue += 20;
@@ -63,5 +60,6 @@ public class Gun : MonoBehaviour
     {
       flash.Play();
     }
+
   }
 }
