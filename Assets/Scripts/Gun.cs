@@ -15,10 +15,10 @@ public class Gun : MonoBehaviour
   void Update()
   {
     // !Kontroll
-    while (Input.GetButtonDown("Fire1"))
-    {
-      FindObjectOfType<AudioManager>().Play("pew");
-    }
+    // while (Input.GetButtonDown("Fire1"))
+    // {
+      FindObjectOfType<AudioManager>().PlayOnce("pew");
+    // }
 
     if (Input.GetButton("Fire1") && Time.time >= fireTime)
     {
