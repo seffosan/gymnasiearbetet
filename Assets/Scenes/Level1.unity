@@ -856,6 +856,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223518459}
   m_CullTransparentMesh: 0
+--- !u!1 &283401130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 977467755094372598, guid: 9f108818b0c7da949b8d8c7a55cd7b0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 977467755477687687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &283401131
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283401130}
+  m_Enabled: 1
 --- !u!1 &321474711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,41 +2616,91 @@ MonoBehaviour:
     volume: 0.4
     pitch: 1
     source: {fileID: 0}
+    isPlaying: 0
   - clip: {fileID: 8300000, guid: e95533ea6af4a1e4fa49922f2fe35eab, type: 3}
     name: ButtonClick
     volume: 1
     pitch: 1
     source: {fileID: 0}
+    isPlaying: 0
   - clip: {fileID: 8300000, guid: a501b38b4cdbe9e45ba864ded8dff545, type: 3}
     name: PlayerHit
     volume: 1
     pitch: 1
     source: {fileID: 0}
+    isPlaying: 0
   - clip: {fileID: 8300000, guid: ea8cef2a671fa7341a9bb05ea92f8a59, type: 3}
     name: Menu
     volume: 0.3
     pitch: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 34a29fbf780b7487cabdf5d88aac8fc8, type: 3}
-    name: Shot
+    isPlaying: 0
+  - clip: {fileID: 8300000, guid: 09d3aa7b778f04760983d4eaec1353d5, type: 3}
+    name: pew
     volume: 1
     pitch: 1
     source: {fileID: 0}
+    isPlaying: 0
   - clip: {fileID: 8300000, guid: 4996c0db51a0d4f50b61ed7d2108bf4f, type: 3}
     name: Walk
     volume: 1
     pitch: 1
     source: {fileID: 0}
+    isPlaying: 0
   - clip: {fileID: 8300000, guid: 4996c0db51a0d4f50b61ed7d2108bf4f, type: 3}
     name: WeirdBGM
-    volume: 1
+    volume: 0.4
     pitch: 1
     source: {fileID: 0}
+    isPlaying: 0
   - clip: {fileID: 8300000, guid: 39cd07fd689d644c6b6ced879d89c6c7, type: 3}
     name: Jump
     volume: 1
     pitch: 1
     source: {fileID: 0}
+    isPlaying: 0
+  - clip: {fileID: 8300000, guid: dbcb02278985643e3a066c4c8cd92abb, type: 3}
+    name: Whit
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isPlaying: 0
+  - clip: {fileID: 8300000, guid: cb8a2787876ac403daf78d0d22becbcd, type: 3}
+    name: WWalk
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isPlaying: 0
+  - clip: {fileID: 8300000, guid: d947c3c2dc4a94f25821634312773460, type: 3}
+    name: WRun
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isPlaying: 0
+  - clip: {fileID: 8300000, guid: c1cd39198045647aca189703509a8b5f, type: 3}
+    name: WJump
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isPlaying: 0
+  - clip: {fileID: 8300000, guid: 5454140ff89fc458d8a9dd6b8eb89876, type: 3}
+    name: WKill
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isPlaying: 0
+  - clip: {fileID: 8300000, guid: 01cd342652dbe694dab7971fa4e989b3, type: 3}
+    name: WHit2
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isPlaying: 0
+  - clip: {fileID: 8300000, guid: 34a29fbf780b7487cabdf5d88aac8fc8, type: 3}
+    name: gun
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isPlaying: 0
 --- !u!4 &960786707
 Transform:
   m_ObjectHideFlags: 0
@@ -4525,7 +4589,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 8.2015e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1e-45, y: 2.1061247e-38, z: 1e-45, w: 9.403955e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -5144,6 +5208,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 977467755436755260, guid: 9f108818b0c7da949b8d8c7a55cd7b0d,
         type: 3}
+      propertyPath: hang
+      value: 
+      objectReference: {fileID: 8300000, guid: 09d3aa7b778f04760983d4eaec1353d5, type: 3}
+    - target: {fileID: 977467755436755260, guid: 9f108818b0c7da949b8d8c7a55cd7b0d,
+        type: 3}
       propertyPath: damage
       value: 10
       objectReference: {fileID: 0}
@@ -5153,6 +5222,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1086526396112451123, guid: b8165f16443a35548af2d03268274c88,
         type: 3}
+    - target: {fileID: 977467755436755260, guid: 9f108818b0c7da949b8d8c7a55cd7b0d,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 977467755908903762, guid: 9f108818b0c7da949b8d8c7a55cd7b0d,
         type: 3}
       propertyPath: looping
@@ -5488,5 +5562,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 977467755094372597, guid: 9f108818b0c7da949b8d8c7a55cd7b0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9f108818b0c7da949b8d8c7a55cd7b0d, type: 3}

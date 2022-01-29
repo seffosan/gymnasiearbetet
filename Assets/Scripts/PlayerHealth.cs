@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
     // !Sätter max liv o Health bar
     health = maxHealth;
     healthbar.SetMaxHealth(maxHealth);
-    FindObjectOfType<AudioManager>().Play("Bgm");
+    FindObjectOfType<AudioManager>().Play("WeirdBGM");
   }
   void OnCollisionEnter(Collision col)
   {
@@ -60,7 +60,5 @@ public class PlayerHealth : MonoBehaviour
     gameHasEnded = true;
     Cursor.lockState = CursorLockMode.None;
     Cursor.visible = true;
-    FindObjectOfType<AudioManager>().Stop("Bgm");
-    FindObjectOfType<AudioManager>().Play("PauseLoop");
   }
 }

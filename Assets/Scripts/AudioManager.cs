@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
   public Sound[] sounds;
+  float timer = 0;
 
   void Awake()
   {
@@ -24,29 +25,22 @@ public class AudioManager : MonoBehaviour
   public void Play(string name)
   {
     Sound s = Array.Find(sounds, Sound => Sound.name == name);
-    if (s.isPlaying = false)
-    {
-      s.source.Play();   
+      s.source.Play();
       s.isPlaying = true;
-    }
-    else{
-      s.source.Stop();
-      s.isPlaying = false;
-    }
+      timer++;
+
+      if (s.isPlaying && timer > 10f)
+      {
+        s.source.Stop();
+        s.isPlaying = false;
+        timer = 0;
+      }
   }
 
   public void Stop(string name)
   {
 
     Sound s = Array.Find(sounds, Sound => Sound.name == name);
-    if (s.isPlaying = true)
-    {
       s.source.Stop();
-      s.isPlaying = false;
-    }
-    else{
-      s.source.Play(); 
-    }
-
   }
 }

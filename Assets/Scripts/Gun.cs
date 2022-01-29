@@ -12,16 +12,49 @@ public class Gun : MonoBehaviour
   public GameObject effect2;
 
   float fireTime = 0f;
+
   void Update()
   {
     // !Kontroll
     if (Input.GetButton("Fire1") && Time.time >= fireTime)
     {
       fireTime = Time.time + 1f / fireRate;
+      FindObjectOfType<AudioManager>().Play("pew");
       Shoot();
     }
 
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+      FindObjectOfType<AudioManager>().Play("WJump");
+      Debug.Log("JUMP"); 
+    }
+
+    if (Input.GetKeyDown(KeyCode.LeftShift))
+    {
+      FindObjectOfType<AudioManager>().Play("WRun");
+    }
+
+    if (Input.GetKeyDown(KeyCode.W))
+    {
+      FindObjectOfType<AudioManager>().Play("gun");
+    }
+
+    if (Input.GetKeyDown(KeyCode.D))
+    {
+      FindObjectOfType<AudioManager>().Play("gun");
+    }
+
+    if (Input.GetKeyDown(KeyCode.S))
+    {
+      FindObjectOfType<AudioManager>().Play("WHit2");
+    }
+    
+    if (Input.GetKeyDown(KeyCode.A))
+    {
+      FindObjectOfType<AudioManager>().Play("WHit2");
+    }
   }
+
   void Shoot()
   {
     // !Skottet
@@ -35,8 +68,8 @@ public class Gun : MonoBehaviour
       if (target != null)
       {
         target.TakeDamage(damage);
-      FindObjectOfType<AudioManager>().Play("Shot");
-        // FindObjectOfType<AudioManager>().Play("HitSound");
+        FindObjectOfType<AudioManager>().Play("Whit");
+        FindObjectOfType<AudioManager>().Play("WHit2");
         GameObject effektGO2 = Instantiate(effect2, hit.point, Quaternion.identity);
         Destroy(effektGO2, 1f);
         Score.scoreValue += 20;
@@ -58,5 +91,6 @@ public class Gun : MonoBehaviour
     {
       flash.Play();
     }
+
   }
 }

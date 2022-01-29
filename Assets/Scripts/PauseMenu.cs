@@ -29,8 +29,6 @@ public class PauseMenu : MonoBehaviour
     GameIsPaused = true;
     Cursor.lockState = CursorLockMode.None;
     Cursor.visible = true;
-    FindObjectOfType<AudioManager>().Play("PauseLoop");
-    FindObjectOfType<AudioManager>().Stop("Bgm");
   }
   public void Resume()
   {
@@ -39,8 +37,6 @@ public class PauseMenu : MonoBehaviour
     GameIsPaused = false;
     Cursor.lockState = CursorLockMode.Locked;
     Cursor.visible = false;
-    FindObjectOfType<AudioManager>().Stop("PauseLoop");
-    FindObjectOfType<AudioManager>().Play("Bgm");
   }
 
   public void Menu()
