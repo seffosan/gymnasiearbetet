@@ -35,13 +35,10 @@ public class PlayerMove : MonoBehaviour
     Vector3 move = transform.right * x + transform.forward * z;
 
     controller.Move(move * speed * Time.deltaTime);
-    FindObjectOfType<AudioManager>().Play("WWalk");
 
     // !Jump
     if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
     {
-      FindObjectOfType<AudioManager>().Play("WJump");
-      Debug.Log("JUMP");
       velocity.y = Mathf.Sqrt(jumpHeight * -2f * g * 4);
       GameObject hitEffectGO = Instantiate(hitEffect, transform.position, Quaternion.identity);
     }
@@ -50,7 +47,6 @@ public class PlayerMove : MonoBehaviour
     if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
     {
       controller.Move(move * (speed - 5) * Time.deltaTime);
-    FindObjectOfType<AudioManager>().Play("WRun");
     }
 
     // !Gravity

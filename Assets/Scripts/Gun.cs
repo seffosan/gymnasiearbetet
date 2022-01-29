@@ -23,6 +23,36 @@ public class Gun : MonoBehaviour
       Shoot();
     }
 
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+      FindObjectOfType<AudioManager>().Play("WJump");
+      Debug.Log("JUMP"); 
+    }
+
+    if (Input.GetKeyDown(KeyCode.LeftShift))
+    {
+      FindObjectOfType<AudioManager>().Play("WRun");
+    }
+
+    if (Input.GetKeyDown(KeyCode.W))
+    {
+      FindObjectOfType<AudioManager>().Play("gun");
+    }
+
+    if (Input.GetKeyDown(KeyCode.D))
+    {
+      FindObjectOfType<AudioManager>().Play("gun");
+    }
+
+    if (Input.GetKeyDown(KeyCode.S))
+    {
+      FindObjectOfType<AudioManager>().Play("WHit2");
+    }
+    
+    if (Input.GetKeyDown(KeyCode.A))
+    {
+      FindObjectOfType<AudioManager>().Play("WHit2");
+    }
   }
 
   void Shoot()
@@ -39,6 +69,7 @@ public class Gun : MonoBehaviour
       {
         target.TakeDamage(damage);
         FindObjectOfType<AudioManager>().Play("Whit");
+        FindObjectOfType<AudioManager>().Play("WHit2");
         GameObject effektGO2 = Instantiate(effect2, hit.point, Quaternion.identity);
         Destroy(effektGO2, 1f);
         Score.scoreValue += 20;
