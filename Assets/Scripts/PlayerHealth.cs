@@ -30,6 +30,13 @@ public class PlayerHealth : MonoBehaviour
       GameObject hitEffectGO = Instantiate(hitEffect, transform.position, Quaternion.identity);
       FindObjectOfType<AudioManager>().Play("PlayerHit");
     }
+
+    if (col.gameObject.CompareTag("blackEnemy"))
+        {
+            TakeDamage(8);
+            GameObject hitEffectGO = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
+        }
   }
   public void TakeDamage(float damageAmount)
   {

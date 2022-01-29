@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: -4716255426120568139}
   m_Layer: 13
   m_Name: Enemy3 Prefab
-  m_TagString: Enemy
+  m_TagString: blackEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -2649,7 +2649,7 @@ MonoBehaviour:
     isPlaying: 0
   - clip: {fileID: 8300000, guid: 4996c0db51a0d4f50b61ed7d2108bf4f, type: 3}
     name: WeirdBGM
-    volume: 0.4
+    volume: 0
     pitch: 1
     source: {fileID: 0}
     isPlaying: 0
